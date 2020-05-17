@@ -54,3 +54,4 @@ function matrixBuilder(width, height) {
     }
   }
 }
+alert("Welcome");
