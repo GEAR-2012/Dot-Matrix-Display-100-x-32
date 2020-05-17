@@ -1,0 +1,230 @@
+:root {
+  --dark-color: #161616;
+  --dark-shadow-color: #161616cc;
+  --dark-shadow-blur: 1.4px;
+  --light-color: #00ff00;
+  --shadow-color: #00ff00cc;
+  --shadow-blur: 3px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  user-select: none;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-family: "DM Mono", monospace;
+  line-height: 30px;
+  text-shadow: 0 0 var(--shadow-blur) var(--shadow-color);
+}
+
+#main-wrapper {
+  width: 99%;
+  margin: 40px auto;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.matrix-display p {
+  font-size: 0.7rem;
+  line-height: 0.58rem;
+  letter-spacing: 2.7px;
+}
+
+.matrix-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+a {
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  color: var(--light-color);
+}
+
+input {
+  font-family: "DM Mono", monospace;
+}
+
+/*
+CONTROL INTERFACE
+*/
+.fade-out {
+  opacity: 0;
+}
+
+/* 
+LOWER CONTROL PANEL
+*/
+/*
+container
+*/
+
+#link {
+  transition: opacity 3s;
+}
+
+/* 
+LOWER CONTROL PANEL
+*/
+/*
+containers
+*/
+#ctrl-cont {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 80px;
+  justify-content: start;
+  transition: opacity 3s;
+}
+
+#led-col-ctrl-cont,
+#speed-ctrl-cont {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 10px;
+  justify-content: start;
+}
+
+/*
+buttons
+*/
+.ctrl-btn {
+  font-family: "DM Mono", monospace;
+  font-size: 1rem;
+  font-weight: normal;
+  white-space: nowrap;
+  height: 2.2rem;
+  color: var(--light-color);
+  text-shadow: 0 0 var(--shadow-blur) var(--shadow-color);
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--light-color);
+  box-shadow: 0 0 var(--shadow-blur) var(--shadow-color),
+    inset 0 0 var(--shadow-blur) var(--shadow-color);
+  border-radius: 8px;
+}
+
+.ctrl-btn:hover {
+  border: 2px solid var(--light-color);
+}
+
+.ctrl-btn:active,
+.active {
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  font-weight: bold;
+  text-shadow: 0 0 var(--dark-shadow-blur) var(--dark-shadow-color);
+}
+
+/*
+unique button styles
+*/
+#scroll-pause {
+  width: 144px;
+  font-size: 1.3rem;
+}
+
+.ctrl-btn.led-col {
+  width: 54px;
+}
+
+.ctrl-btn.speed {
+  width: 64px;
+}
+
+.ctrl-btn span {
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 800px) {
+  #main-wrapper {
+    margin: 8px auto;
+  }
+
+  .matrix-container {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+  }
+
+  .matrix-display p {
+    font-size: 0.5rem;
+    line-height: 0.4rem;
+  }
+
+  a {
+    font-size: 1.2rem;
+  }
+
+  /*
+  CONTROL INTERFACE
+  */
+  /* 
+  LOWER CONTROL PANEL
+  */
+
+  /*
+  containers
+  */
+
+  #ctrl-cont {
+    grid-template-columns: repeat(1, auto);
+    gap: 14px;
+  }
+
+  #led-col-ctrl-cont,
+  #speed-ctrl-cont {
+    gap: 6px;
+  }
+
+  /*
+  buttons
+  */
+  .ctrl-btn {
+    font-size: 0.8rem;
+    height: 1.6rem;
+    border: 0.5px solid var(--light-color);
+    border-radius: 5px;
+  }
+
+  /*
+  unique button styles
+  */
+  #scroll-pause {
+    width: 114px;
+    font-size: 0.9rem;
+  }
+
+  .ctrl-btn.led-col {
+    width: 38px;
+  }
+
+  .ctrl-btn.speed {
+    width: 46px;
+  }
+
+  .ctrl-btn span {
+    font-size: 1rem;
+  }
+}
