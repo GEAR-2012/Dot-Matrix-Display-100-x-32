@@ -315,3 +315,4 @@ function controlsIn(e) {
     }, 10000);
   }
 }
+console.log("welcome");
