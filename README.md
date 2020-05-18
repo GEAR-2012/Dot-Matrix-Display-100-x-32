@@ -9,4 +9,3 @@ You can use the app to display informations like on a dot matrix display.
 ### Yup! That's it.
 
 You can use it easily.
-Because this app is user-friendly.
