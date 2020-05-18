@@ -6,4 +6,6 @@ This is a 100 LED x 32 LED dot matrix display
 
 You can use the app to display informations like on a dot matrix display.
 
-### Yup!
+### Yup! That's it.
+
+You can use it easily.
